@@ -6,8 +6,9 @@
 #include "Graph.h"
 
 using namespace std;
-int main()
-{
+int main(int argc, char *argv[]) {
+    string arg1 = argv[1];
+    string arg2 = argv[2];
     // This is a simple C++ program that prints "Hello, World!" to the console.
     std::cout << "Hello, World!" << std::endl;
 
@@ -271,15 +272,18 @@ int main()
 
     // TAKE INPUT FROM USER
     // this will give us the Source Room Number or Teacher Name
-    string userSource = "002L";
-    string userDestination = "110B";
+    string userSource = arg1;
+    string userDestination = arg2;
 
     // find the source node and the destination node
     Course source = g.getNode(userSource);
     Course destination = g.getNode(userDestination);
-    if (source.equals( Course()) || destination.equals(Course())) {
-        cout << "Invalid source or destination\n";
-    }
+
+    // error dectiotion is not used because  
+
+    // if (source.equals( Course()) || destination.equals(Course())) {
+    //     cout << "Invalid source or destination\n";
+    // }
     
 
     // use the bellman ford algorithm to find the shortest path
@@ -288,13 +292,13 @@ int main()
     
     // print the path
     if (path.empty()) {
-        cout << "No path exists from " << source.roomName << " (" << source.teacherName << ")" << " to " << destination.roomName << " (" << destination.teacherName << ")"  <<  "\n";
+        // cout << "No path exists from " << source.roomName << " (" << source.teacherName << ")" << " to " << destination.roomName << " (" << destination.teacherName << ")"  <<  "\n";
     } else {
-        cout << "Shortest path from " << source.roomName << " (" << source.teacherName << ")"" to " << destination.roomName << " (" << destination.teacherName << ")"  << ":\n";
+        // cout << "Shortest path from " << source.roomName << " (" << source.teacherName << ")"" to " << destination.roomName << " (" << destination.teacherName << ")"  << ":\n";
         for (const auto& course : path) {
             cout << course.roomName << " ";
         }
-        cout << "\n";
+        // cout << "\n";
     }
 
     return 0;

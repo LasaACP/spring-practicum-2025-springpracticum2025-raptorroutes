@@ -19,6 +19,7 @@ public:
     list<string> teacherNames;
     string roomName;
 
+    // idk what this does but it fixed and error
     bool operator<(const Course& other) const {
         if (roomName != other.roomName)
             return roomName < other.roomName;
