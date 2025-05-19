@@ -21,6 +21,9 @@ public:
     void addEdge(const Course& u, const Course& v, double weight);
     //  bellman ford algorithm to find the shortest path from a source to a destination
     vector<Course> bellmanFord(const Course& source, const Course& destination, map<Course, Course>& predecessors) const;
+
+    // function to get a node given the a course name
+    Course getNode(const string& courseName) const;
 };
 
 #endif // GRAPH_H

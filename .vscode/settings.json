@@ -51,6 +51,7 @@
         "xutility": "cpp",
         "list": "cpp",
         "vector": "cpp",
-        "map": "cpp"
+        "map": "cpp",
+        "xtree": "cpp"
     }
 }
