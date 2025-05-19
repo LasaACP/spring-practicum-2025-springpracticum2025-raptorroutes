@@ -1,5 +1,6 @@
 {
     "files.associations": {
+        "*.py": "python",
         "atomic": "cpp",
         "bit": "cpp",
         "cctype": "cpp",
@@ -52,6 +53,8 @@
         "list": "cpp",
         "vector": "cpp",
         "map": "cpp",
-        "xtree": "cpp"
+        "xtree": "cpp",
+        "algorithm": "cpp",
+        "optional": "cpp"
     }
 }
