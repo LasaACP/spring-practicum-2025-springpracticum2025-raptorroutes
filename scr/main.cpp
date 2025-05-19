@@ -138,7 +138,7 @@ int main()
     g.addEdge(c105,  c107,  10.0);
     g.addEdge(c107,  c108,  2.0);
     g.addEdge(c107,  c109B, 10.0);
-    g.addEdge(c109B, c110A, 2.0);
+    g.addEdge(c109B, c110B, 2.0);
     g.addEdge(c109B, c109A, 10.0);
     g.addEdge(c109A, c110A, 2.0);
 
@@ -271,35 +271,32 @@ int main()
 
     // TAKE INPUT FROM USER
     // this will give us the Source Room Number or Teacher Name
-    string userSource = "711B";
-    string userDestination = "207A";
+    string userSource = "002L";
+    string userDestination = "110B";
 
     // find the source node and the destination node
     Course source = g.getNode(userSource);
     Course destination = g.getNode(userDestination);
     if (source.equals( Course()) || destination.equals(Course())) {
-        std::cout << "Invalid source or destination\n";
+        cout << "Invalid source or destination\n";
     }
     
 
     // use the bellman ford algorithm to find the shortest path
     map<Course, Course> predecessors;
     vector<Course> path = g.bellmanFord(source, destination, predecessors);
+    
+    // print the path
     if (path.empty()) {
-        std::cout << "No path exists from " << source.roomName << " to " << destination.roomName << "\n";
+        cout << "No path exists from " << source.roomName << " (" << source.teacherName << ")" << " to " << destination.roomName << " (" << destination.teacherName << ")"  <<  "\n";
     } else {
-        std::cout << "Shortest path from " << source.roomName << " to " << destination.roomName << ": ";
+        cout << "Shortest path from " << source.roomName << " (" << source.teacherName << ")"" to " << destination.roomName << " (" << destination.teacherName << ")"  << ":\n";
         for (const auto& course : path) {
-            std::cout << course.roomName << " ";
+            cout << course.roomName << " ";
         }
-        std::cout << "\n";
+        cout << "\n";
     }
 
-
-
-
-
-    std::cout << "Course Name: " << c101.roomName << std::endl;
     return 0;
 }
 
