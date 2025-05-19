@@ -7,8 +7,17 @@ from subprocess import PIPE
 
 app = Flask(__name__)
 
-@app.route('/')
+@app.route("/", methods = ['GET', 'POST'])
 def home():
+    return render_template("schedule.html")
+
+@app.route("/test", methods = ['GET', 'POST'])
+def test():
+    if (request.method == 'POST'):
+        print(request.form['schedule'])
+    return render_template('test.html')
+@app.route('/display')
+def display():
     out = run()
     return render_template('hello.html', strng = out)
 
