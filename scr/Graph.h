@@ -6,6 +6,10 @@
 #include <list>
 #include <iostream>
 #include <vector>
+#include <limits>
+#include <algorithm>
+#include <utility>
+#include "Course.h"
 
 using namespace std;
 

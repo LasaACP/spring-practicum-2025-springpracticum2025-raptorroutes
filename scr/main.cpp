@@ -262,7 +262,8 @@ int main()
     Course n166_155 = Course("166_155", "166_155");
     g.addEdge(c166, n166_155, 15.0);
     g.addEdge(c005L, n166_155, 55.5);
-
+    g.addEdge(n302_506, n101_126, 46.0);
+    g.addEdge(n502_402, n126_201, 46.0);
     // end of the creation of the graph
 
     
@@ -270,21 +271,30 @@ int main()
 
     // TAKE INPUT FROM USER
     // this will give us the Source Room Number or Teacher Name
-    string userSource = "104";
-    string userDestination = "103";
+    string userSource = "711B";
+    string userDestination = "207A";
 
+    // find the source node and the destination node
     Course source = g.getNode(userSource);
     Course destination = g.getNode(userDestination);
-    if (source == Course() || destination == Course()) {
+    if (source.equals( Course()) || destination.equals(Course())) {
         std::cout << "Invalid source or destination\n";
     }
     
-    // find the source node and the destination node
-    
 
     // use the bellman ford algorithm to find the shortest path
+    map<Course, Course> predecessors;
+    vector<Course> path = g.bellmanFord(source, destination, predecessors);
+    if (path.empty()) {
+        std::cout << "No path exists from " << source.roomName << " to " << destination.roomName << "\n";
+    } else {
+        std::cout << "Shortest path from " << source.roomName << " to " << destination.roomName << ": ";
+        for (const auto& course : path) {
+            std::cout << course.roomName << " ";
+        }
+        std::cout << "\n";
+    }
 
-    // return the path to the user
 
 
 

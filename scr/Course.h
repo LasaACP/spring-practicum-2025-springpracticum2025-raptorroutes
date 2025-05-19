@@ -3,29 +3,37 @@
 
 #include <string>
 #include <list>
+#include <iostream>
+#include <vector>
+#include <limits>
+#include <algorithm>
+#include <map>
+
+using namespace std;
 
 class Course
 {
 
 public:
-    std::string teacherName;
-    std::list<std::string> teacherNames;
-    std::string roomName;
+    string teacherName;
+    list<string> teacherNames;
+    string roomName;
 
+    bool operator<(const Course& other) const {
+        if (roomName != other.roomName)
+            return roomName < other.roomName;
+        return teacherName < other.teacherName;
+    }
+    
     // Constructor
-    Course(const std::string &teacherName, const std::string &roomName);
+    Course(const string &teacherName, const string &roomName);
 
-    Course(const std::list<std::string> &teacherNames, const std::string &roomName);
+    Course(const list<string> &teacherNames, const string &roomName);
 
     Course();
 
-    bool operator!=(const Course& rhs) const { // it took so long to remember(look up) how to do this and its not even worth it, i should have just made a equals function
-        return teacherName != rhs.teacherName || roomName != rhs.roomName || teacherNames != rhs.teacherNames;
-    }
-
-    bool operator==(const Course& rhs) const {
-        return teacherName == rhs.teacherName && roomName == rhs.roomName && teacherNames == rhs.teacherNames;
-    }
+    bool equals(const Course& other) const;
+    bool notEquals(const Course& other) const;
 };
 
 #endif // COURSE_H
