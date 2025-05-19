@@ -14,18 +14,24 @@ def home():
 @app.route("/test", methods = ['GET', 'POST'])
 def test():
     if (request.method == 'POST'):
-        print(request.form['schedule'])
+        tchrs = request.form['schedule']
+        print(tchrs)
+        tchrsName = tchrs.split(",")
+        ans = run(tchrsName[0], tchrsName[1])
+        return render_template('test.html', ans = ans)
+
+
     return render_template('test.html')
 @app.route('/display')
 def display():
     out = run()
     return render_template('hello.html', strng = out)
 
-def run():
-    inp = "This is a map of LASA, processed through C++"
-    s=subprocess.run(["./a.exe",inp],stdout=PIPE)
-    print(s)
-    return s.stdout.decode("utf-8")
+def run(inp1, inp2):
+    s=subprocess.run(["./a.exe",inp1, inp2],stdout=PIPE)
+    a = (s.stdout).decode('utf-8').lstrip()
+    ans = (a.split(" "))
+    return ans
 
 if __name__ == '__main__':
     app.run(debug=True)

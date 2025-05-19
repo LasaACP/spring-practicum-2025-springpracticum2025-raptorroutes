@@ -75,7 +75,7 @@
 <span class="dot" id = "L504" style="margin-top: 33.3%;margin-left: 41%;"></span>
 <span class="dot" id = "L502" style="margin-top: 33.3%;margin-left: 45.3%;"></span>
 <span class="dot" id = "L134D" style="margin-top: 42.8%;margin-left: 34%;"></span>
-<span class="dot" id = "L505" style="margin-top: 36.8%;margin-left: 34%;"></span>
+<span class="dot" id = "L505" style="margin-top: 34.3%;margin-left: 35.7%;"></span>
 <span class="dot" id = "L133" style="margin-top: 40.6%;margin-left: 48.3%;"></span>
 <span class="dot" id = "L501" style="margin-top: 36.7%;margin-left: 48.3%;"></span>
 <span class="dot" id = "L134" style="margin-top: 44%;margin-left: 41%;"></span>
@@ -92,7 +92,9 @@
 <span class="dot" id = "L206_210" style="margin-top: 43.8%;margin-left: 61.8%;"></span>
 <span class="dot" id = "L405_409" style="margin-top: 37%;margin-left: 61.8%;"></span>
 <span class="dot" id = "L166_155" style="margin-top: 18.5%;margin-left: 55.7%;"></span>
+<button onclick=move() style=" font-size:30px; padding:10px; border-radius:10px; border:none; background-color: #64b3f4; position:absolute">←New Navigation!</button>
 
+<p id ="answer" hidden>{{ans}}</p>
 <style>
 
 img{
@@ -106,10 +108,31 @@ body {
 
 .dot {
 	position:absolute;
-  height: 18px;
-  width: 18px;
+  height: 25px;
+  width: 25px;
   border-radius: 50%;
   display: inline-block;
-  background-color:red;
+	opacity: 50%;
+  background-color:lightgray;
 }
 </style>
+
+<script>
+
+	function move(){
+		location.href = "{{ url_for('home') }}";
+	}
+	arr = document.getElementById("answer").innerText
+	arr = arr.replace(/\[|\]/g,'').split(',')
+	console.log(arr)
+	for (let i = 0; i < arr.length; i++){
+		temp = arr[i].trim()
+		temp = 	temp.substring(1, temp.length-1)
+		console.log(temp)
+		document.getElementById(temp).style.backgroundColor = "lightcoral";
+		document.getElementById(temp).style.opacity = "100%";
+		document.getElementById(temp).innerText = i+1
+		document.getElementById(temp).style.textAlign = 'center';
+		document.getElementById(temp).style.boxShadow = "5px 5px 18px lightcoral"
+	}
+</script>
