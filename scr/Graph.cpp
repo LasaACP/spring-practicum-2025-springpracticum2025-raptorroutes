@@ -15,7 +15,6 @@ void Graph::addEdge(const Course& u, const Course& v, double weight){
 
 vector<Course> Graph::bellmanFord(const Course& source, const Course& destination, map<Course, Course>& predecessors) const{
     
-    // pretty much a copy of how to do the algorithm... hopefully it works
     map<Course, double> distance;
     for (const auto& pair : adjList) {
         distance[pair.first] = numeric_limits<double>::infinity();
@@ -45,7 +44,7 @@ vector<Course> Graph::bellmanFord(const Course& source, const Course& destinatio
             path.push_back(at); // just like a stack
             if (predecessors.find(at) == predecessors.end()) {
                 // no path exists
-                cout << "No path exists from " << source.roomName << " to " << destination.roomName << "\n"; // i hate endl, \n is just better
+                cout << "No path exists from " << source.roomName << " to " << destination.roomName << "\n"; 
             }
         }
         if (!path.empty() || source.equals(destination)) {

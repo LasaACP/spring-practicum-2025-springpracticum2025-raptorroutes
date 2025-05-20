@@ -1,6 +1,5 @@
 #include "Course.h"
 
-
 Course::Course(const string &teacherName, const string &roomName)
 {
     this->teacherName = teacherName;

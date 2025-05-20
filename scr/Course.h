@@ -11,8 +11,7 @@
 
 using namespace std;
 
-class Course
-{
+class Course {
 
 public:
     string teacherName;

@@ -12,19 +12,14 @@ int main(int argc, char *argv[]) {
     } else {
     string arg1 = argv[1];
     string arg2 = argv[2];
-    // This is a simple C++ program that prints "Hello, World!" to the console.
-    // std::cout << "Hello, World!" << std::endl;
+
 
     // 100s hall
     Course c101  = Course("Park", "101");
     Course c102  = Course("Nurse", "102");
     Course c103  = Course("Pressler", "103");
-
-    // creating a list to use for pass through on all rooms with multiple teachers
-    std::list<std::string> n;
-    n.push_back("Burford");
-    n.push_back("Escandell");
-    Course c104  = Course(n, "104");
+    
+    Course c104  = Course("JasonEscandell", "104");
 
     Course c105  = Course("Williams", "105");
     Course c107  = Course("Pinkston", "107");
@@ -42,28 +37,26 @@ int main(int argc, char *argv[]) {
 
     // 200s hall
     Course c201  = Course("AcademicCounselors", "201"); 
-    Course c202  = Course("Karch", "202");
+    Course c202  = Course("HirokoKarch", "202");
     Course c204  = Course("Zhong", "204");
     Course c205  = Course("Ramírez", "205");
     Course c206  = Course("Preston", "206");
     Course c207A = Course("Contreras", "207A");
 
-    n.clear();
-    n.push_back("Scherber");
-    n.push_back("Walker");
-    Course c207B = Course(n, "207B");
+ 
+    Course c207B = Course("Walker", "207B");
 
     Course c210  = Course("Breland", "210");
 
     // 300s hall
     Course c301  = Course("Tabor", "301");
-    Course c302  = Course("Escandell", "302");
+    Course c302  = Course("AdamEscandell", "302");
     Course c303  = Course("SiFuentes", "303");
     Course c304  = Course("Goodell", "304");
     Course c307  = Course("Pettigrew", "307");
     Course c308  = Course("Flowers", "308");
-    Course c309A = Course("Garcia", "309A");
-    Course c309B = Course("Karch", "309B");
+    Course c309A = Course("JosueGarcia", "309A");
+    Course c309B = Course("MarcKarch", "309B");
     Course c310A = Course("Moody", "310A");
     Course c310B = Course("Martanovic", "310B");
 
@@ -78,13 +71,7 @@ int main(int argc, char *argv[]) {
     // 500s hall
     Course c501  = Course("BookRoom", "501");
 
-    n.clear();
-    n.push_back("Saldana");
-    n.push_back("Saldana");
-    n.push_back("Nelson");
-    n.push_back("Cruz");
-    n.push_back("MacPhail");
-    Course c502  = Course(n, "502");
+    Course c502  = Course("Saldana", "502");
 
     Course c503  = Course("CollegeCenter", "503");
     Course c504  = Course("Czaplinski", "504");
@@ -93,7 +80,7 @@ int main(int argc, char *argv[]) {
 
     // 700s hall
     Course c700  = Course("Smith", "700"); ///////////////////////////
-    Course c701  = Course("Garcia", "701");
+    Course c701  = Course("KevinGarcia", "701");
     Course c702  = Course("Granado", "702");
     Course c703  = Course("DeBerry", "703");
     Course c704  = Course("Villanueva", "704");
@@ -270,8 +257,6 @@ int main(int argc, char *argv[]) {
     g.addEdge(n502_402, n126_201, 46.0);
     // end of the creation of the graph
 
-    
-    
 
     // TAKE INPUT FROM USER
     // this will give us the Source Room Number or Teacher Name
