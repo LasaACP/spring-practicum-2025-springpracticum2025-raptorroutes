@@ -53,12 +53,16 @@
 			<button onclick="myFunction2(this)">Czaplinski</button>
 			<button onclick="myFunction2(this)">Shockey</button>
 			<button onclick="myFunction2(this)">Mueller</button>
+			<button onclick="myFunction2(this)">GranadoOffice</button>
 			<button onclick="myFunction2(this)">KevinGarcia</button>
 			<button onclick="myFunction2(this)">Granado</button>
 			<button onclick="myFunction2(this)">DeBerry</button>
 			<button onclick="myFunction2(this)">Villanueva</button>
+			<button onclick="myFunction2(this)">Baldwin</button>
 			<button onclick="myFunction2(this)">Cuttill</button>
 			<button onclick="myFunction2(this)">Zamora</button>
+			<button onclick="myFunction2(this)">Fisher</button>
+			<button onclick="myFunction2(this)">Hewitt</button>
 			<button onclick="myFunction2(this)">Mokry</button>
 			<button onclick="myFunction2(this)">MetalShop</button>
 			<button onclick="myFunction2(this)">Gonzalez</button>
@@ -182,20 +186,24 @@ function processFunction(){
   const filter = input.value.toUpperCase();
   const div = document.getElementById("teacherNames");
   const divs = div.getElementsByTagName("div");
-	var arr = ""
+  var arr = ""
+
   for (let i = 0; i < divs.length; i++) {
     arr+=(divs[i].innerText);
-		if (i == divs.length-1){
-			continue;
-		} else {
-		arr+=","
-		}
-  }
-	document.getElementById("schedule").value = arr;
 
+	if (i == divs.length-1){
+		continue;
+	} else {
+		arr+=","
+	}
+  }
+  
+  document.getElementById("schedule").value = arr;
 }
+
 var teacher = ""
 let count = 0;
+
 function myFunction() {
   document.getElementById("myDropdown").classList.toggle("show");
 	if (count %2==0){
@@ -204,9 +212,7 @@ function myFunction() {
 		document.getElementById("teacherNames").style.top = "350px";
 	}
 }
-document.getElementById("tchnam").addEventListener("click", function() {
-	count++;
-});
+document.getElementById("tchnam").addEventListener("click", function() {count++;});
 
 function myFunction2(element){
 	var txt = element.innerText;
@@ -237,10 +243,6 @@ function filterFunction() {
   }
 }
 </script>
-
-
-
-
 
 <style>
 

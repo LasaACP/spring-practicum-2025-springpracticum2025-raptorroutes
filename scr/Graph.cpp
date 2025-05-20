@@ -15,13 +15,19 @@ void Graph::addEdge(const Course& u, const Course& v, double weight){
 
 vector<Course> Graph::bellmanFord(const Course& source, const Course& destination, map<Course, Course>& predecessors) const{
     
+    // create a map to store the distances of each node from the source
     map<Course, double> distance;
+
+    // set the distances of all nodes to infinity
     for (const auto& pair : adjList) {
         distance[pair.first] = numeric_limits<double>::infinity();
         predecessors[pair.first] = Course();
     }
+
+    // the start node is the start so it cleaerly has a distance of 0
     distance[source] = 0.0;
 
+    // relax the edges |V| - 1 times
     size_t V = adjList.size();
     for (size_t i = 1; i < V; ++i) {
         for (const auto& pair : adjList) {
