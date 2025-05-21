@@ -12,114 +12,94 @@ int main(int argc, char *argv[]) {
     } else {
     string arg1 = argv[1];
     string arg2 = argv[2];
-    // This is a simple C++ program that prints "Hello, World!" to the console.
-    // std::cout << "Hello, World!" << std::endl;
+
 
     // 100s hall
-    Course c101  = Course("Park", "101");
-    Course c102  = Course("Nurse", "102");
-    Course c103  = Course("Pressler", "103");
-
-    // creating a list to use for pass through on all rooms with multiple teachers
-    std::list<std::string> n;
-    n.push_back("Burford");
-    n.push_back("Escandell");
-    Course c104  = Course(n, "104");
-
-    Course c105  = Course("Williams", "105");
-    Course c107  = Course("Pinkston", "107");
-    Course c108  = Course("Castro", "108");
-    Course c109A = Course("Snyder", "109A");
-    Course c109B = Course("Sharp", "109B");
-    Course c110A = Course("Lange", "110A");
-    Course c110B = Course("Baley", "110B");
+    Course c101  = Course("Park",           "101");
+    Course c102  = Course("Nurse",          "102");
+    Course c103  = Course("Pressler",       "103");
+    Course c104  = Course("JasonEscandell", "104");
+    Course c105  = Course("Williams",       "105");
+    Course c107  = Course("Pinkston",       "107");
+    Course c108  = Course("Castro",         "108");
+    Course c109A = Course("Snyder",         "109A");
+    Course c109B = Course("Sharp",          "109B");
+    Course c110A = Course("Lange",          "110A");
+    Course c110B = Course("Baley",          "110B");
 
     // extra 100s hall
-    Course c126  = Course("MainOffice", "126");
+    Course c126  = Course("MainOffice",    "126");
     Course c133  = Course("WritingCenter", "133");
-    Course c134  = Course("Library", "134");
-    Course c134D = Course("Welin", "134D");
+    Course c134  = Course("Library",       "134");
+    Course c134D = Course("Welin",         "134D");
 
     // 200s hall
     Course c201  = Course("AcademicCounselors", "201"); 
-    Course c202  = Course("Karch", "202");
-    Course c204  = Course("Zhong", "204");
-    Course c205  = Course("Ramírez", "205");
-    Course c206  = Course("Preston", "206");
-    Course c207A = Course("Contreras", "207A");
-
-    n.clear();
-    n.push_back("Scherber");
-    n.push_back("Walker");
-    Course c207B = Course(n, "207B");
-
-    Course c210  = Course("Breland", "210");
+    Course c202  = Course("HirokoKarch",        "202");
+    Course c204  = Course("Zhong",              "204");
+    Course c205  = Course("Ramírez",            "205");
+    Course c206  = Course("Preston",            "206");
+    Course c207A = Course("Contreras",          "207A");
+    Course c207B = Course("Walker",             "207B");
+    Course c210  = Course("Breland",            "210");
 
     // 300s hall
-    Course c301  = Course("Tabor", "301");
-    Course c302  = Course("Escandell", "302");
-    Course c303  = Course("SiFuentes", "303");
-    Course c304  = Course("Goodell", "304");
-    Course c307  = Course("Pettigrew", "307");
-    Course c308  = Course("Flowers", "308");
-    Course c309A = Course("Garcia", "309A");
-    Course c309B = Course("Karch", "309B");
-    Course c310A = Course("Moody", "310A");
-    Course c310B = Course("Martanovic", "310B");
+    Course c301  = Course("Tabor",         "301");
+    Course c302  = Course("AdamEscandell", "302");
+    Course c303  = Course("SiFuentes",     "303");
+    Course c304  = Course("Goodell",       "304");
+    Course c307  = Course("Pettigrew",     "307");
+    Course c308  = Course("Flowers",       "308");
+    Course c309A = Course("JosueGarcia",   "309A");
+    Course c309B = Course("MarcKarch",     "309B");
+    Course c310A = Course("Moody",         "310A");
+    Course c310B = Course("Martanovic",    "310B");
 
     // 400s hall
-    Course c401  = Course("Kossa", "401");
-    Course c402  = Course("Parra", "402");
+    Course c401  = Course("Kossa",     "401");
+    Course c402  = Course("Parra",     "402");
     Course c405  = Course("Brockhoff", "405");
-    Course c406  = Course("Ahmed", "406");
+    Course c406  = Course("Ahmed",     "406");
     Course c409  = Course("Harrelson", "409");
-    Course c410  = Course("Willie", "410");
+    Course c410  = Course("Willie",    "410");
 
     // 500s hall
-    Course c501  = Course("BookRoom", "501");
-
-    n.clear();
-    n.push_back("Saldana");
-    n.push_back("Saldana");
-    n.push_back("Nelson");
-    n.push_back("Cruz");
-    n.push_back("MacPhail");
-    Course c502  = Course(n, "502");
-
+    Course c501  = Course("BookRoom",      "501");
+    Course c502  = Course("Saldana",       "502");
     Course c503  = Course("CollegeCenter", "503");
-    Course c504  = Course("Czaplinski", "504");
-    Course c505  = Course("Shockey", "505");
-    Course c506  = Course("Mueller", "506");
+    Course c504  = Course("Czaplinski",    "504");
+    Course c505  = Course("Shockey",       "505");
+    Course c506  = Course("Mueller",       "506");
 
     // 700s hall
-    Course c700  = Course("Smith", "700"); ///////////////////////////
-    Course c701  = Course("Garcia", "701");
-    Course c702  = Course("Granado", "702");
-    Course c703  = Course("DeBerry", "703");
-    Course c704  = Course("Villanueva", "704");
-    Course c705  = Course("Smith", "705"); //////////////////////////
-    Course c706  = Course("Cuttill", "706");
-    Course c707  = Course("Zamora", "707");
-    Course c708A = Course("Smith", "708A"); ///////////////////////////
-    Course c708B = Course("Smith", "708B"); ///////////////////////////
-    Course c709  = Course("Mokry", "709");
-    Course c710  = Course("MetalShop", "710");
-    Course c711A = Course("Gonzalez", "711A");
-    Course c711B = Course("WoodShop", "711B");
+    Course c700  = Course("GranadoOffice", "700");
+    Course c701  = Course("KevinGarcia",   "701");
+    Course c702  = Course("Granado",       "702");
+    Course c703  = Course("DeBerry",       "703");
+    Course c704  = Course("Villanueva",    "704");
+    Course c705  = Course("Baldwin",       "705");
+    Course c706  = Course("Cuttill",       "706");
+    Course c707  = Course("Zamora",        "707");
+    Course c708A = Course("Hewitt",        "708A");
+    Course c708B = Course("Fisher",        "708B");
+    Course c709  = Course("Mokry",         "709");
+    Course c710  = Course("MetalShop",     "710");
+    Course c711A = Course("Gonzalez",      "711A");
+    Course c711B = Course("WoodShop",      "711B");
 
     // fine arts hall
-    Course c166 = Course("Band", "166");  
-    Course c155 = Course("Choir", "155");
+    Course c166 = Course("Band",      "166");  
+    Course c155 = Course("Choir",     "155");
     Course c156 = Course("Orchestra", "156"); 
 
     // gyms
-    Course c073  = Course("BigGym", "073");
-    Course c098  = Course("SmallGym", "098");
+    Course c073  = Course("BigGym",      "073");
+    Course c098  = Course("SmallGym",    "098");
     Course c001D = Course("DanceOffice", "001D");
-    Course c606A = Course("Dance", "606A");
-    Course c606B = Course("JazzBand", "606B");
-    Course c118  = Course("WeightRoom", "118");
-    Course c117  = Course("SportsMed", "118");
+    Course c606A = Course("Dance",       "606A");
+    Course c606B = Course("JazzBand",    "606B");
+    Course c118  = Course("WeightRoom",  "118");
+    Course c117  = Course("SportsMed",   "117");
     Course c001L = Course("LockerRoom1", "001L");
     Course c002L = Course("LockerRoom2", "002L");
     Course c003L = Course("LockerRoom3", "003L");
@@ -146,6 +126,11 @@ int main(int argc, char *argv[]) {
     g.addEdge(c109B, c109A, 10.0);
     g.addEdge(c109A, c110A, 2.0);
 
+    g.addEdge(c102,  c104,  10.0);
+    g.addEdge(c104,  c108,  20.0);
+    g.addEdge(c108,  c110B, 10.0);
+    g.addEdge(c110B, c110A, 10.0);
+
     // 200s hall
     g.addEdge(c201,  c202,  2.0);
     g.addEdge(c201,  c205,  30.0);
@@ -154,6 +139,10 @@ int main(int argc, char *argv[]) {
     g.addEdge(c205,  c207A, 11.25);
     g.addEdge(c207A, c207B, 11.25);
     g.addEdge(c207B, c210,  2.0);
+
+    g.addEdge(c202,  c204,  11.25);
+    g.addEdge(c204,  c206,  11.25);
+    g.addEdge(c206,  c210,  23.5);
     
     // 300s hall
     g.addEdge(c301,  c302,  2.0);
@@ -166,12 +155,19 @@ int main(int argc, char *argv[]) {
     g.addEdge(c309B, c309A, 11.66);
     g.addEdge(c309A, c310A, 2.0);
 
+    g.addEdge(c302,  c304,  16.66);
+    g.addEdge(c308 , c310B, 11.66);
+    g.addEdge(c310B, c310A, 11.66);
+
     // 400s hall
     g.addEdge(c401,  c402,  2.0);
     g.addEdge(c401,  c405,  22.5);
     g.addEdge(c405,  c406,  2.0);
     g.addEdge(c405,  c409,  22.5);
     g.addEdge(c406,  c410,  24.375);
+
+    g.addEdge(c402,  c406,  22.5);
+    g.addEdge(c409,  c410,  11.5);
 
     // 500s hall
     g.addEdge(c501,  c502,  2.0);
@@ -227,8 +223,8 @@ int main(int argc, char *argv[]) {
     g.addEdge(c201, n126_201, 3.33);
     // 100s to 300s
     Course n104_108 = Course("104_108", "104_108");
-    g.addEdge(c104, n104_108, 6.66);
-    g.addEdge(c108, n104_108, 6.66);
+    g.addEdge(c104, n104_108, 7.66);
+    g.addEdge(c108, n104_108, 10.66);
     g.addEdge(c105, n104_108, 37.5);
     Course n303_307 = Course("303_307", "303_307");
     g.addEdge(c303, n303_307, 6.66);
@@ -270,8 +266,6 @@ int main(int argc, char *argv[]) {
     g.addEdge(n502_402, n126_201, 46.0);
     // end of the creation of the graph
 
-    
-    
 
     // TAKE INPUT FROM USER
     // this will give us the Source Room Number or Teacher Name
@@ -286,7 +280,7 @@ int main(int argc, char *argv[]) {
     // error dectiotion is not used because  
 
     if (source.equals( Course()) || destination.equals(Course())) {
-        cout << "Invalid source or destination\n";
+        cerr << "Invalid source or destination\n";
     }
     
 
@@ -296,7 +290,7 @@ int main(int argc, char *argv[]) {
     
     // print the path
     if (path.empty()) {
-        // cout << "No path exists from " << source.roomName << " (" << source.teacherName << ")" << " to " << destination.roomName << " (" << destination.teacherName << ")"  <<  "\n";
+        cerr << "No path exists from " << source.roomName << " (" << source.teacherName << ")" << " to " << destination.roomName << " (" << destination.teacherName << ")"  <<  "\n";
     } else {
         // cout << "Shortest path from " << source.roomName << " (" << source.teacherName << ")"" to " << destination.roomName << " (" << destination.teacherName << ")"  << ":\n";
         for (const auto& course : path) {
