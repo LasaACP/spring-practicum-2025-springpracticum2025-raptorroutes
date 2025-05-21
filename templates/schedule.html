@@ -1,9 +1,9 @@
 <div class="box">
   <center><h1>Welcome!</h1></center>
   <center><h2>Please enter teacher names for each period.</h2></center>
+  <button id="tchnam" onclick="myFunction()" class="dropbtn">Display/Hide Teacher Names</button>
 	<div class="dropdown">
 		<div class="center">
-		<button id="tchnam" onclick="myFunction()" class="dropbtn">Display/Hide Teacher Names</button>
 		</div>
 		<div id="myDropdown" class="dropdown-content" style="scrollbar-width: none;">
 			<input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()">
@@ -283,9 +283,10 @@ function filterFunction() {
 }
 
 #tchnam{
-	position: absolute;
-	left:95px;
-	width:300px;
+	/* position: absolute; */
+	top:30%;
+	margin:auto;
+	width:16vw;
 }
 body{
     background-image: linear-gradient(to right,#c2e59c, #64b3f4);
@@ -333,10 +334,10 @@ body{
 }
 
 .dropdown-content {
-	left:40px;
+	left:-10px;
   display: none;
   position: absolute;
-	margin-top:55px;
+	margin-top:15px;
   background-color: #f6f6f6;
   overflow: auto;
   border: 1px solid #ddd;
