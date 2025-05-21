@@ -233,7 +233,9 @@ int main(int argc, char *argv[]) {
     // 300s to 500s
     Course n302_506 = Course("302_506", "302_506");
     g.addEdge(c302, n302_506, 5.0);
+    g.addEdge(c301, n302_506, 6.0);
     g.addEdge(c506, n302_506, 12.0);
+    g.addEdge(n302_506, c505, 12.0);
     Course n701_outside = Course("701_outside", "701_outside");
     g.addEdge(c701, n701_outside, 7.28);
     g.addEdge(n701_outside, c001C, 10.92);
@@ -262,8 +264,8 @@ int main(int argc, char *argv[]) {
     Course n166_155 = Course("166_155", "166_155");
     g.addEdge(c166, n166_155, 15.0);
     g.addEdge(c005L, n166_155, 55.5);
-    g.addEdge(n302_506, n101_126, 46.0);
-    g.addEdge(n502_402, n126_201, 46.0);
+    g.addEdge(n302_506, n101_126, 37.0);
+    g.addEdge(n502_402, n126_201, 37.0);
     // end of the creation of the graph
 
 
